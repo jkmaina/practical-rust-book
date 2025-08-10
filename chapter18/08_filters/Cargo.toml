@@ -1,0 +1,24 @@
+[package]
+name = "filders"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+use tokio::sync::mpsc;
+
+#[tokio::main]
+async fn main() {
+    let (tx, mut rx) = mpsc::channel(32);
+   
+    // Spawn a task that sends values to the channel
+    tokio::spawn(async move {
+        for i in 1..=5 {
+            tx.send(i).await.unwrap();
+        }
+    });
+   
+    // Receive values from the channel as a stream
+    while let Some(value) = rx.recv().await {
+        println!("Got value: {}", value);
+    }
+}

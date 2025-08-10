@@ -1,0 +1,1 @@
+This is sample text inside the file.
