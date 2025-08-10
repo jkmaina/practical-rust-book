@@ -1,1 +1,0 @@
-C:\Projects\Rust\chapter2\56_practical_example_enhanced_calculator\target\debug\practical_example_enhanced_calculator.exe: C:\Projects\Rust\chapter2\56_practical_example_enhanced_calculator\src\main.rs
