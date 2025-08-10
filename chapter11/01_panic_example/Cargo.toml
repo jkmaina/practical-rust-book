@@ -1,0 +1,10 @@
+[package]
+name = "panic_example"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[profile.release]
+panic = "abort"
+
