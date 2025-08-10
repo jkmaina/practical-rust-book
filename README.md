@@ -64,15 +64,15 @@ This comprehensive guide takes you from Rust fundamentals to production-ready ap
 ## Repository Structure
 
 ```
-├── chapter1/          # Hello World and Rust basics
-├── chapter2/          # Variables, data types, and operators
-├── chapter3/          # Control flow and loops
-├── chapter4/          # Functions and documentation
-├── chapter5/          # Ownership and memory management
-├── chapter6/          # References and borrowing
-├── chapter7/          # Lifetimes
-├── chapter8/          # Structs and methods
-├── chapter9/          # Enums and pattern matching
+├── chapter01/         # Hello World and Rust basics
+├── chapter02/         # Variables, data types, and operators
+├── chapter03/         # Control flow and loops
+├── chapter04/         # Functions and documentation
+├── chapter05/         # Ownership and memory management
+├── chapter06/         # References and borrowing
+├── chapter07/         # Lifetimes
+├── chapter08/         # Structs and methods
+├── chapter09/         # Enums and pattern matching
 ├── chapter10/         # Modules and project organization
 ├── chapter11/         # Error handling
 ├── chapter12/         # Generics
@@ -104,7 +104,7 @@ git clone https://github.com/jmaina/practical-rust-book.git
 cd practical-rust-book
 
 # Each chapter contains multiple examples
-cd chapter1/01_hello_world
+cd chapter01/01_hello_world
 cargo run
 
 # For web examples
