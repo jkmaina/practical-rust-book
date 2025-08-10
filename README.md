@@ -1,8 +1,12 @@
 # Practical Rust: Real-World Applications and Programming
 
 <div align="center">
-  <img src="https://m.media-amazon.com/images/I/71MfL6auRLL._SL1500_.jpg" alt="Practical Rust Book Cover" width="300"/>
+  <a href="https://www.amazon.com/Practical-Rust-Real-World-Applications-Programming-ebook/dp/B0FGHSS6LZ">
+    <img src="https://m.media-amazon.com/images/I/71MfL6auRLL._SL1500_.jpg" alt="Practical Rust Book Cover" width="300"/>
+  </a>
 </div>
+
+**This is the official reposittory for Practical Rust: Real-World Applications and Programming by James Karanja Maina, with over 300+ hands-on examples that will help you build learn Rust and apply your knowledge to build real-world applications from CLI tools to web services, games, and WebAssembly modules. This comprehensive book teaches production-ready Rust development through practical projects rather than abstract theory, covering everything from memory management to async programming with complete source code and testing strategies.**
 
 ## About This Repository
 
