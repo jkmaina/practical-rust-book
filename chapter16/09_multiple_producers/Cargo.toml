@@ -1,0 +1,6 @@
+[package]
+name = "multiple_producers"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
