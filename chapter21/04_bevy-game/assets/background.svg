@@ -1,0 +1,14 @@
+
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green background -->
+  <rect width="128" height="128" fill="#329632"/>
+  
+  <!-- Grass pattern -->
+  <defs>
+    <pattern id="grass" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#329632"/>
+      <rect x="0" y="0" width="8" height="8" fill="#287828"/>
+    </pattern>
+  </defs>
+  <rect width="128" height="128" fill="url(#grass)"/>
+</svg>

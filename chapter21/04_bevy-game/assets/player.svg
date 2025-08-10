@@ -1,0 +1,13 @@
+
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue square with white border -->
+  <rect x="4" y="4" width="56" height="56" fill="#0064ff" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Simple face -->
+  <!-- Eyes -->
+  <circle cx="20" cy="22" r="3" fill="#ffffff"/>
+  <circle cx="44" cy="22" r="3" fill="#ffffff"/>
+  
+  <!-- Smile -->
+  <path d="M 20 35 Q 32 45 44 35" stroke="#ffffff" stroke-width="2" fill="none"/>
+</svg>

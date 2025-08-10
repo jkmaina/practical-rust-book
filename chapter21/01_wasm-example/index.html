@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rust WebAssembly Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #fib-result {
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🦀 Rust WebAssembly Example</h1>
+    
+    <div class="section">
+        <h2>Greeting Function</h2>
+        <p>Click the button to call a Rust function that shows an alert:</p>
+        <button id="greet-button">Greet from Rust!</button>
+    </div>
+    
+    <div class="section">
+        <h2>Fibonacci Calculator</h2>
+        <p>Calculate Fibonacci numbers using Rust compiled to WebAssembly:</p>
+        <label for="fib-input">Enter a number (0-40):</label>
+        <input type="number" id="fib-input" value="10" min="0" max="40">
+        <button id="fib-button">Calculate Fibonacci</button>
+        <p id="fib-result"></p>
+    </div>
+
+    <script type="module">
+        import init, { greet, fibonacci } from './pkg/wasm_example.js';
+        
+        async function run() {
+            try {
+                // Initialize the WASM module
+                await init();
+                console.log('WASM module loaded successfully!');
+                
+                // Set up greet button
+                document.getElementById('greet-button').addEventListener('click', () => {
+                    console.log('Greet button clicked');
+                    greet('Rust WebAssembly');
+                });
+                
+                // Set up fibonacci button
+                document.getElementById('fib-button').addEventListener('click', () => {
+                    console.log('Fibonacci button clicked');
+                    const input = document.getElementById('fib-input');
+                    const n = parseInt(input.value);
+                    
+                    if (isNaN(n) || n < 0 || n > 40) {
+                        document.getElementById('fib-result').textContent = 'Please enter a number between 0 and 40';
+                        return;
+                    }
+                    
+                    const startTime = performance.now();
+                    const result = fibonacci(n);
+                    const endTime = performance.now();
+                    
+                    document.getElementById('fib-result').textContent = 
+                        `Fibonacci(${n}) = ${result} (calculated in ${(endTime - startTime).toFixed(2)}ms)`;
+                });
+                
+                console.log('Event listeners attached successfully!');
+                
+            } catch (error) {
+                console.error('Error initializing WASM:', error);
+                document.body.innerHTML += '<p style="color: red;">Error loading WebAssembly module. Check console for details.</p>';
+            }
+        }
+        
+        // Run the initialization
+        run();
+    </script>
+</body>
+</html>

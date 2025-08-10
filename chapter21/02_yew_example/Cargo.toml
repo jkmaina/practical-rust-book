@@ -1,0 +1,8 @@
+[package]
+name = "yew_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+yew = { version = "0.21.0", features = ["csr"] }
+web-sys = "0.3"

@@ -1,0 +1,7 @@
+[target.thumbv7em-none-eabihf]
+runner = "cargo embed"
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+]
+[build]
+target = "thumbv7em-none-eabihf"
